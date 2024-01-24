@@ -1,0 +1,18 @@
+@use "../abstract/colors";
+@use "../abstract/fonts";
+@use "../abstract/sizes";
+@use "../abstract/breakpoints";
+
+.btn-primary {
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  font-weight: fonts.$fw-regular;
+  font-size: fonts.$fs-300;
+  color: colors.$clr-white;
+  background-color: colors.$clr-accent;
+  border-radius: sizes.$size-200;
+  width: 100%;
+  text-align: center;
+  padding: sizes.$size-400;
+}

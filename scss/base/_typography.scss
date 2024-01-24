@@ -1,0 +1,28 @@
+@use "../abstract/colors" as c;
+@use "../abstract/fonts" as f;
+
+.header {
+  color: c.$clr-primary-400;
+  font-weight: f.$fw-bold;
+  font-size: f.$fs-800;
+}
+
+.header--secondary {
+  color: c.$clr-white;
+  font-size: f.$fs-600;
+}
+
+.header--accent {
+  color: c.$clr-accent;
+  font-size: f.$fs-600;
+}
+
+.paragraph {
+  font-size: f.$fs-300;
+  font-weight: f.$fw-regular;
+  color: c.$clr-neutral-400;
+}
+
+.paragraph--light {
+  color: c.$clr-white;
+}

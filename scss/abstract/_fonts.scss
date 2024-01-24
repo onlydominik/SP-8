@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+$ff-body: "Karla", sans-serif;
+
+$fs-300: 0.875rem;
+$fs-400: 0.9375rem;
+$fs-500: 1rem;
+$fs-600: 1.0625rem;
+$fs-700: 1.125rem;
+$fs-800: 1.1875rem;
+
+$fw-regular: 400;
+$fw-bold: 700;
+
+.fs-400 {
+  font-size: $fs-400;
+}
+
+.fs-500 {
+  font-size: $fs-500;
+}
+
+.fs-700 {
+  font-size: $fs-700;
+}
+
+.fw-regular {
+  font-weight: $fw-regular;
+}
+
+.fw-bold {
+  font-weight: $fw-bold;
+}

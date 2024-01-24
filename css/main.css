@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+.fs-400 {
+  font-size: 0.9375rem;
+}
+
+.fs-500 {
+  font-size: 1rem;
+}
+
+.fs-700 {
+  font-size: 1.125rem;
+}
+
+.fw-regular {
+  font-weight: 400;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+/***
+    The new CSS reset - version 1.11.2 (last updated 15.11.2023)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+*:where(
+    :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
+  ) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Fix mobile Safari increase font-size on landscape mode */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+/* revert for bug in Chromium browsers
+ - fix for the content editable attribute will work properly.
+ - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable="false"])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable="true"]) {
+  -webkit-user-drag: element;
+}
+
+.header {
+  color: hsl(179, 62%, 43%);
+  font-weight: 700;
+  font-size: 1.1875rem;
+}
+
+.header--secondary {
+  color: white;
+  font-size: 1.0625rem;
+}
+
+.header--accent {
+  color: hsl(71, 73%, 54%);
+  font-size: 1.0625rem;
+}
+
+.paragraph {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: hsl(218, 22%, 67%);
+}
+
+.paragraph--light {
+  color: white;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex--start {
+  justify-content: start;
+}
+
+.grid {
+  display: grid;
+}
+
+.sec {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sec--primary {
+  background-color: hsl(179, 62%, 43%);
+}
+
+.sec--secondary {
+  background-color: rgb(74, 190, 189);
+}
+
+.sec--light {
+  background-color: white;
+}
+
+.btn-primary {
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: white;
+  background-color: hsl(71, 73%, 54%);
+  border-radius: 0.25rem;
+  width: 100%;
+  text-align: center;
+  padding: 0.75rem;
+}
+
+body {
+  height: 100vh;
+  background-color: hsl(204, 43%, 93%);
+  font-family: "Karla", sans-serif;
+}
+
+.card {
+  width: clamp(300px, 50%, 90%);
+  flex-shrink: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
