@@ -1,9 +1,23 @@
 $clr-white: #ffffffff;
 
 $clr-accent: hsl(71, 73%, 54%);
+$clr-accent-hover: hsla(71, 73%, 54%, 0.87);
 
 $clr-primary-300: rgba(74, 190, 189, 1);
 $clr-primary-400: hsl(179, 62%, 43%);
 
 $clr-neutral-100: hsl(204, 43%, 93%);
+$clr-neutral-200: hsla(0, 0%, 93%, 0.692);
 $clr-neutral-400: hsl(218, 22%, 67%);
+
+.clr-bg--primary {
+  background-color: $clr-primary-400;
+}
+
+.clr-bg--secondary {
+  background-color: $clr-primary-300;
+}
+
+.clr-bg--light {
+  background-color: $clr-white;
+}

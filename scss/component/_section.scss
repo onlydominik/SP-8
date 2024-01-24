@@ -1,11 +1,18 @@
 @use "../abstract/sizes";
 @use "../abstract/colors";
+@use "../abstract/breakpoints";
+@use "../abstract/fonts";
 
 .sec {
   padding: sizes.$size-600;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: sizes.$size-500;
+
+  @include breakpoints.lg {
+    padding: sizes.$size-900;
+  }
 }
 
 .sec--primary {
@@ -14,8 +21,4 @@
 
 .sec--secondary {
   background-color: colors.$clr-primary-300;
-}
-
-.sec--light {
-  background-color: colors.$clr-white;
 }

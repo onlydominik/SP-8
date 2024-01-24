@@ -2,6 +2,7 @@
 @use "../abstract/fonts";
 @use "../abstract/sizes";
 @use "../abstract/breakpoints";
+@use "../abstract/box-shadows";
 
 .btn-primary {
   cursor: pointer;
@@ -15,4 +16,15 @@
   width: 100%;
   text-align: center;
   padding: sizes.$size-400;
+  @include box-shadows.box-shadow(rgba(0, 0, 0, 0.24) 0px 3px 8px);
+
+  @include breakpoints.lg {
+    font-size: fonts.$fs-400;
+  }
+}
+
+.btn-primary:hover {
+  color: colors.$clr-white;
+  background-color: colors.$clr-accent-hover;
+  transition: all 100ms;
 }

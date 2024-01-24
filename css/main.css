@@ -1,31 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
-.fs-400 {
-  font-size: 0.9375rem;
+.clr-bg--primary {
+  background-color: hsl(179, 62%, 43%);
 }
 
-.fs-500 {
-  font-size: 1rem;
+.clr-bg--secondary {
+  background-color: rgb(74, 190, 189);
 }
 
-.fs-700 {
-  font-size: 1.125rem;
+.clr-bg--light {
+  background-color: white;
 }
 
-.fw-regular {
-  font-weight: 400;
-}
-
-.fw-bold {
-  font-weight: 700;
+:root {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 /***
     The new CSS reset - version 1.11.2 (last updated 15.11.2023)
     GitHub page: https://github.com/elad2412/the-new-css-reset
 ***/
-*:where(
-    :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
-  ) {
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
   all: unset;
   display: revert;
 }
@@ -53,7 +47,7 @@ img {
 /* revert for bug in Chromium browsers
  - fix for the content editable attribute will work properly.
  - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
-:where([contenteditable]:not([contenteditable="false"])) {
+:where([contenteditable]:not([contenteditable=false])) {
   -moz-user-modify: read-write;
   -webkit-user-modify: read-write;
   overflow-wrap: break-word;
@@ -62,7 +56,7 @@ img {
 }
 
 /* apply back the draggable feature - exist only in Chromium and Safari */
-:where([draggable="true"]) {
+:where([draggable=true]) {
   -webkit-user-drag: element;
 }
 
@@ -71,25 +65,58 @@ img {
   font-weight: 700;
   font-size: 1.1875rem;
 }
+@media (min-width: 45em) {
+  .header {
+    font-size: 1.25rem;
+  }
+}
 
 .header--secondary {
   color: white;
-  font-size: 1.0625rem;
+  font-size: 1rem;
 }
 
 .header--accent {
   color: hsl(71, 73%, 54%);
-  font-size: 1.0625rem;
+  font-size: 1rem;
 }
 
 .paragraph {
   font-size: 0.875rem;
   font-weight: 400;
   color: hsl(218, 22%, 67%);
+  line-height: 1.25rem;
+  width: 90%;
+  margin-top: -0.5em;
+}
+@media (min-width: 64em) {
+  .paragraph {
+    font-size: 0.9375rem;
+  }
 }
 
 .paragraph--light {
   color: white;
+}
+
+.paragraph--fixed > p,
+.paragraph--fixed > * > p {
+  width: 100%;
+  margin-top: 0;
+}
+
+.paragraph--special {
+  font-size: 1.875rem;
+  color: white;
+  font-weight: 700;
+}
+
+.price p {
+  color: hsla(0, 0%, 93%, 0.692);
+  letter-spacing: 0.07em;
+  font-size: 0.8125rem;
+  margin-left: 0.5rem;
+  white-space: nowrap;
 }
 
 .flex {
@@ -106,11 +133,21 @@ img {
   display: grid;
 }
 
+.grid-width-full {
+  grid-column: 1/-1;
+}
+
 .sec {
   padding: 1.25rem;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 1rem;
+}
+@media (min-width: 64em) {
+  .sec {
+    padding: 2rem;
+  }
 }
 
 .sec--primary {
@@ -119,10 +156,6 @@ img {
 
 .sec--secondary {
   background-color: rgb(74, 190, 189);
-}
-
-.sec--light {
-  background-color: white;
 }
 
 .btn-primary {
@@ -137,17 +170,39 @@ img {
   width: 100%;
   text-align: center;
   padding: 0.75rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+@media (min-width: 64em) {
+  .btn-primary {
+    font-size: 0.9375rem;
+  }
+}
+
+.btn-primary:hover {
+  color: white;
+  background-color: hsla(71, 73%, 54%, 0.87);
+  transition: all 100ms;
+}
+
+.card {
+  width: clamp(300px, 50%, 40em);
+  flex-shrink: 0;
+  grid-template-columns: 1fr;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+@media (min-width: 45em) {
+  .card {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 body {
   height: 100vh;
   background-color: hsl(204, 43%, 93%);
   font-family: "Karla", sans-serif;
-}
-
-.card {
-  width: clamp(300px, 50%, 90%);
-  flex-shrink: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

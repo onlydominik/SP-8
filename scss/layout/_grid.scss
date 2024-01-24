@@ -1,3 +1,6 @@
 .grid {
   display: grid;
 }
+.grid-width-full {
+  grid-column: 1 / -1;
+}

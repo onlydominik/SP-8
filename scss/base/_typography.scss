@@ -1,28 +1,61 @@
 @use "../abstract/colors" as c;
 @use "../abstract/fonts" as f;
+@use "../abstract/breakpoints" as b;
+@use "../abstract/sizes" as s;
 
 .header {
   color: c.$clr-primary-400;
   font-weight: f.$fw-bold;
   font-size: f.$fs-800;
+
+  @include b.md {
+    font-size: f.$fs-900;
+  }
 }
 
 .header--secondary {
   color: c.$clr-white;
-  font-size: f.$fs-600;
+  font-size: f.$fs-500;
 }
 
 .header--accent {
   color: c.$clr-accent;
-  font-size: f.$fs-600;
+  font-size: f.$fs-500;
 }
 
 .paragraph {
   font-size: f.$fs-300;
   font-weight: f.$fw-regular;
   color: c.$clr-neutral-400;
+  line-height: s.$size-600;
+  width: 90%;
+  margin-top: -0.5em;
+
+  @include b.lg {
+    font-size: f.$fs-400;
+  }
 }
 
 .paragraph--light {
   color: c.$clr-white;
+}
+
+.paragraph--fixed > p,
+.paragraph--fixed > * > p {
+  width: 100%;
+  margin-top: 0;
+}
+
+.paragraph--special {
+  font-size: f.$fs-special;
+  color: c.$clr-white;
+  font-weight: f.$fw-bold;
+}
+
+.price p {
+  color: c.$clr-neutral-200;
+  letter-spacing: 0.07em;
+  font-size: f.$fs-100;
+  margin-left: s.$size-300;
+  white-space: nowrap;
 }

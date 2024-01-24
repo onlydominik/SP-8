@@ -1,0 +1,13 @@
+@use "../abstract/breakpoints";
+
+.card {
+  width: clamp(300px, 50%, 40em);
+  flex-shrink: 0;
+  grid-template-columns: 1fr;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  @include breakpoints.md {
+    grid-template-columns: 1fr 1fr;
+  }
+}
